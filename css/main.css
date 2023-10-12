@@ -1,0 +1,103 @@
+:root {
+  --blue: steelblue;
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+}
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+html {
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 0;
+}
+body {
+  padding: 0;
+}
+header {
+  padding: 1rem 2rem;
+  background-color: var(--blue);
+  color: #e4e4e4;
+  border-bottom: 2px solid #999;
+}
+h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: 100;
+}
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 100;
+}
+nav {
+  padding: 1rem 2rem;
+}
+main {
+  padding: 1rem 2rem;
+}
+footer {
+  padding: 1rem 2rem;
+  position: fixed;
+  inset: auto 0 0 0;
+  background: #d4d4d4;
+}
+footer p {
+  font-size: var(--font-size-sm);
+  color: #777;
+}
+p,
+input,
+button {
+  font-size: 1rem;
+}
+nav form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (orientation: portrait) {
+  nav form {
+    gap: 0;
+  }
+}
+nav input {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  flex: 50% 1 1;
+}
+nav button {
+  background-color: var(--blue);
+  color: white;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+@media (orientation: portrait) {
+  nav button span {
+    display: none;
+  }
+}
+main {
+  padding-bottom: 4rem;
+}
+.weather-card {
+  background-color: var(--blue);
+  color: white;
+  padding: 1rem;
+}
+.weather-card p {
+  font-size: var(--font-size-md);
+  margin-block: 1rem;
+}
+.weather-card p i {
+  margin-inline-end: 1rem;
+}
